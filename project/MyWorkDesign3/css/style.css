@@ -3,6 +3,7 @@
   --main-color: #2196f3;
   --non-decoration: none;
   --back-color: rgb(251, 245, 245);
+  --back-section: #eae9e9;
 }
 /* End Variables */
 /* Stat global rules */
@@ -18,6 +19,7 @@ html {
 }
 body {
   font-family: 'Cairo', sans-serif;
+  overflow-x: hidden;
 }
 ul {
   list-style: none;
@@ -205,7 +207,7 @@ header .container .dropM .inside_dropM a {
   display: flex;
   height: 70vh;
   margin-top: 12px;
-  background-color: #eae9e9;
+  background-color: var(--back-section);
   position: relative;
 }
 .content::before {
@@ -339,14 +341,15 @@ header .container .dropM .inside_dropM a {
 }
 /* End arrowdown */
 /* Start cards */
-article {
+section.cards {
 }
-article .container {
+section.cards .container {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-article .container .button {
+section.cards .container .button,
+section.gallery .container .button {
   margin: 40px auto;
   border: 1px solid black;
   text-align: center;
@@ -357,38 +360,41 @@ article .container .button {
   position: relative;
   cursor: auto;
 }
-article .container .button::before {
+section.cards .container .button::before,
+section.gallery .container .button::before {
   content: '';
   position: absolute;
   width: 10%;
   height: 25%;
   border-radius: 50%;
-  background-color: #3106ff;
+  background-color: var(--main-color);
   top: 20px;
   left: -30px;
   cursor: auto;
 }
-article .container .button::after {
+section.cards .container .button::after,
+section.gallery .container .button::after {
   content: '';
   position: absolute;
   width: 10%;
   height: 25%;
   border-radius: 50%;
-  background-color: #3106ff;
+  background-color: var(--main-color);
   top: 20px;
   right: -30px;
 }
-article .container .button a {
+section.cards .container .button a,
+section.gallery .container .button a {
   color: black;
   text-decoration: none;
   font-size: x-large;
 }
-article .container .cards {
+section.cards .container .cards {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 25px 3rem;
 }
-article .container .cards .card {
+section.cards .container .cards .card {
   width: 300px;
   height: 400px;
   border: 1px solid #f0e6e6b3;
@@ -396,67 +402,67 @@ article .container .cards .card {
   display: flex;
   flex-direction: column;
 }
-article .container .cards .card .container {
+section.cards .container .cards .card .container {
   max-width: 100%;
   flex: 1;
   align-items: start;
 }
 @media (max-width: 1199px) {
-  article .container .cards {
+  section.cards .container .cards {
     grid-template-columns: repeat(3, 1fr);
   }
-  article .container .cards .card {
+  section.cards .container .cards .card {
   }
 }
 @media (max-width: 991px) {
-  article .container .cards {
+  section.cards .container .cards {
     grid-template-columns: repeat(2, 1fr);
   }
-  article .container .cards .card {
+  section.cards .container .cards .card {
   }
 }
 @media (max-width: 768px) {
-  article .container .cards {
+  section.cards .container .cards {
     grid-template-columns: repeat(2, 1fr);
   }
-  article .container .cards .card {
+  section.cards .container .cards .card {
   }
 }
 @media (max-width: 587px) {
-  article .container .cards {
+  section.cards .container .cards {
     grid-template-columns: repeat(1, 1fr);
   }
-  article .container .cards .card {
+  section.cards .container .cards .card {
     width: 100%;
     height: 87%;
     margin: 0 0 5.5rem;
   }
-  article .container .cards .card .info {
+  section.cards .container .cards .card .info {
   }
-  article .container .cards .card .more {
+  section.cards .container .cards .card .more {
   }
 }
 @media (max-width: 300px) {
-  article .container .cards {
+  section.cards .container .cards {
   }
-  article .container .cards .card {
+  section.cards .container .cards .card {
     width: 250px;
   }
-  article .container .cards .card .info {
+  section.cards .container .cards .card .info {
   }
-  article .container .cards .card .more {
+  section.cards .container .cards .card .more {
   }
 }
-article .container .cards .card:hover {
+section.cards .container .cards .card:hover {
 }
-article .container .cards .card .image {
+section.cards .container .cards .card .image {
 }
-article .container .cards .card .image img {
+section.cards .container .cards .card .image img {
   max-width: 100%;
   border-top-left-radius: 6px;
   border-top-right-radius: 6px;
 }
-article .container .cards .card .info {
+section.cards .container .cards .card .info {
   line-height: 1.5;
   flex: 2;
   border-bottom: 1px solid #d7cfcf;
@@ -476,7 +482,7 @@ article .container .cards .card .info::before {
   width: 100%;
   position: absolute;
 } */
-article .container .cards .card .more {
+section.cards .container .cards .card .more {
   display: flex;
   justify-content: space-between;
   align-items: end;
@@ -488,11 +494,121 @@ article .container .cards .card .more {
 
   /* height: calc(100% - 268px); */
 }
-article .container .cards .card .more a {
+section.cards .container .cards .card .more a {
   text-decoration: none;
   color: var(--main-color);
 }
-article .container .cards .card .more i {
+section.cards .container .cards .card .more i {
   color: var(--main-color);
 }
 /* End cards */
+/* Start Gallery */
+.gallery {
+  background-color: var(--back-section);
+  position: relative;
+}
+.gallery::before {
+  content: '';
+  height: 100%;
+  width: 100%;
+  background-color: inherit;
+  position: absolute;
+  /* background: linear-gradient(
+      -45deg,
+      #d3d5d5 16px,
+      red 16px,
+      #e7e7ea 16px,
+      transparent 0
+    ),
+    linear-gradient(45deg, #29373e 16px, transparent 0);
+  background-position-x: 0%, 0%;
+  background-position-y: 0%, 0%;
+  background-repeat: repeat, repeat;
+  background-size: auto, auto;
+  background-position-x: 0%, 0%;
+  background-position-y: 0%, 0%;
+  background-repeat: repeat, repeat;
+  background-size: auto, auto;
+  background-position: right top;
+  background-repeat: repeat-x;
+  background-size: 22px 32px; */
+  background: linear-gradient(
+      -45deg,
+      var(--back-section) 16px,
+      #e1e1e1 16px,
+      transparent 0
+    ),
+    linear-gradient(45deg, var(--back-section) 16px, transparent 0);
+  background-position-x: 0%, 0%;
+  background-position-y: 0%, 0%;
+  background-repeat: repeat, repeat;
+  background-size: auto, auto;
+  background-position-x: 0%, 0%;
+  background-position-y: 0%, 0%;
+  background-repeat: repeat, repeat;
+  background-size: auto, auto;
+  background-position-x: 0%, 0%;
+  background-position-y: 0%, 0%;
+  background-repeat: repeat, repeat;
+  background-size: auto, auto;
+  background-position: right top;
+  background-repeat: repeat-x;
+  background-size: 32px 32px;
+
+  top: -32px;
+}
+
+.gallery .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10rem;
+}
+section.gallery .container .button {
+  top: 6rem;
+}
+.gallery .container .cards2 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px 40px;
+  margin-top: 10rem;
+}
+@media (max-width: 1199px) {
+  .gallery .container .cards2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .gallery .container .cards2 .card2 .conImg {
+    width: 470px;
+    height: 470px;
+  }
+}
+
+.gallery .container .cards2 .card2 {
+}
+.gallery .container .cards2 .card2 .conImg {
+  background-color: #f2f2f2;
+  width: 400px;
+  display: flex;
+  align-items: center;
+  height: 400px;
+}
+@media (max-width: 768px) {
+  .gallery .container .cards2 {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .gallery .container .cards2 .card2 .conImg {
+    width: 100%;
+    height: 100%;
+    margin: 30px auto;
+  }
+}
+.gallery .container .cards2 .card2 .conImg .image {
+}
+.gallery .container .cards2 .card2 .conImg .image img {
+  max-width: 90%;
+  max-height: 90%;
+  display: block;
+  margin: auto;
+}
+
+/* End Gallery */
