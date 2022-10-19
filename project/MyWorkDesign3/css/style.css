@@ -353,19 +353,21 @@ section.cards .container {
   align-items: center;
 }
 section.cards .container .button,
-section.gallery .container .button {
+section.gallery .container .button,
+section.features .container .button {
   margin: 40px auto;
   border: 1px solid black;
   text-align: center;
   width: fit-content;
   padding: 13px 40px;
   text-transform: uppercase;
-  cursor: pointer;
+  /* cursor: pointer; */
   position: relative;
   cursor: auto;
 }
 section.cards .container .button::before,
-section.gallery .container .button::before {
+section.gallery .container .button::before,
+section.features .container .button::before {
   content: '';
   position: absolute;
   width: 10%;
@@ -377,7 +379,8 @@ section.gallery .container .button::before {
   cursor: auto;
 }
 section.cards .container .button::after,
-section.gallery .container .button::after {
+section.gallery .container .button::after,
+section.features .container .button::after {
   content: '';
   position: absolute;
   width: 10%;
@@ -388,7 +391,8 @@ section.gallery .container .button::after {
   right: -30px;
 }
 section.cards .container .button a,
-section.gallery .container .button a {
+section.gallery .container .button a,
+section.features .container .button a {
   color: black;
   text-decoration: none;
   font-size: x-large;
@@ -568,7 +572,8 @@ section.cards .container .cards .card .more i {
   align-items: center;
   margin-top: 10rem;
 }
-section.gallery .container .button {
+section.gallery .container .button,
+section.features .container .featuresBox .feature .info .button {
   top: 6rem;
 }
 .gallery .container .cards2 {
@@ -621,8 +626,6 @@ section.gallery .container .button {
 }
 .features .container {
 }
-.features .container .button {
-}
 .features .container .featuresBox {
   /* display: flex;
   justify-content: space-between; */
@@ -631,16 +634,58 @@ section.gallery .container .button {
   column-gap: 32px;
   margin: 5rem auto;
 }
+@media (max-width: 1199px) {
+  .features .container .featuresBox {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 63px;
+  }
+}
+@media (max-width: 991px) {
+  .features .container .featuresBox {
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 63px;
+  }
+}
 .features .container .featuresBox .feature {
-  height: 700px;
+  /* height: 50rem; */
   position: relative;
   border: 1px solid #c1c1c1;
 }
+@media (max-width: 1199px) {
+  .features .container .featuresBox .feature {
+    /* height: 775px; */
+  }
+}
+@media (max-width: 991px) {
+  .features .container .featuresBox .feature {
+    width: 702px;
+    /* height: 55rem; */
+  }
+}
+@media (max-width: 767px) {
+  .features .container .featuresBox .feature {
+    width: 100%;
+    /* height: 45rem; */
+  }
+}
+@media (max-width: 300px) {
+  .features .container .featuresBox .feature {
+    width: 266px;
+    /* height: 35rem; */
+  }
+}
 .features .container .featuresBox .feature .img {
-  width: 365px;
+  /* width: 365px; */
+  width: 100%;
 }
 .features .container .featuresBox .feature .img img {
   max-width: 100%;
+}
+@media (max-width: 1199px) {
+  .features .container .featuresBox .feature .img {
+  }
+  .features .container .featuresBox .feature .img img {
+  }
 }
 .features .container .featuresBox .feature .info {
   display: flex;
@@ -653,6 +698,7 @@ section.gallery .container .button {
   /* z-index: 333; */
   /* top: 20rem; */
   position: relative;
+  margin-bottom: 2rem;
 }
 .features .container .featuresBox .feature .info::before {
   position: absolute;
@@ -664,6 +710,11 @@ section.gallery .container .button {
   left: 0;
   z-index: 1;
   transform: skew(0deg, -15deg);
+}
+@media (max-width: 991px) {
+  .features .container .featuresBox .feature .info::before {
+    top: -130px;
+  }
 }
 .features .container .featuresBox .feature .info .header {
   font-size: 41px;
