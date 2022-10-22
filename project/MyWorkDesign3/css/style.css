@@ -354,24 +354,27 @@ section.cards .container {
 }
 section.cards .container .button,
 section.gallery .container .button,
-section.features .container .button {
+section.features .container .button,
+section.testimonials .container .button {
   margin: 40px auto;
-  border: 1px solid black;
+  border: 2px solid black;
   text-align: center;
   width: fit-content;
   padding: 13px 40px;
   text-transform: uppercase;
   /* cursor: pointer; */
   position: relative;
+  font-weight: bold;
   cursor: auto;
 }
 section.cards .container .button::before,
 section.gallery .container .button::before,
-section.features .container .button::before {
+section.features .container .button::before,
+section.testimonials .container .button::before {
   content: '';
   position: absolute;
-  width: 10%;
-  height: 25%;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
   background-color: var(--main-color);
   top: 20px;
@@ -380,11 +383,12 @@ section.features .container .button::before {
 }
 section.cards .container .button::after,
 section.gallery .container .button::after,
-section.features .container .button::after {
+section.features .container .button::after,
+section.testimonials .container .button::after {
   content: '';
   position: absolute;
-  width: 10%;
-  height: 25%;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
   background-color: var(--main-color);
   top: 20px;
@@ -392,7 +396,8 @@ section.features .container .button::after {
 }
 section.cards .container .button a,
 section.gallery .container .button a,
-section.features .container .button a {
+section.features .container .button a,
+section.testimonials .container .button a {
   color: black;
   text-decoration: none;
   font-size: x-large;
@@ -777,3 +782,77 @@ section.features .container .featuresBox .feature .info .button {
 .features .container .featuresBox .feature:nth-child(3) .info button {
 }
 /* Features */
+/* Start Testimonials  */
+.testimonials {
+  background-color: var(--back-section);
+  width: 100vw;
+  height: 100vh;
+  padding: 3rem 0 0 0;
+}
+.testimonials .container {
+}
+.testimonials .container .button {
+}
+.testimonials .container .button a {
+}
+.testimonials .container .info {
+}
+.testimonials .container .info .container1 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 5rem auto auto auto;
+}
+.testimonials .container .info .container1 .testInfo {
+  background-color: var(--white);
+  width: 350px;
+  height: 215px;
+  margin-bottom: 2rem;
+  border-radius: 5px;
+  padding: 10px;
+}
+.testimonials .container .info .container1 .testInfo .imgage {
+  position: relative;
+}
+.testimonials .container .info .container1 .testInfo .imgage .bgimg {
+  /* display: none; just now */
+  position: absolute;
+  background-color: var(--back-section);
+  right: 0;
+  top: -70px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-right: -25px;
+}
+.testimonials .container .info .container1 .testInfo .imgage .bgimg img {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  right: 0;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.testimonials .container .info .des {
+}
+.testimonials .container .info .des h1 {
+}
+.testimonials .container .info .des h4 {
+  font-size: 19px;
+  color: #6c6a6a;
+  padding-top: 5px;
+}
+.testimonials .container .info .des .stars {
+  padding: 10px 0;
+}
+.testimonials .container .info .des .stars .gold::before {
+  color: goldenrod;
+}
+.testimonials .container .info .des .textInfo {
+  line-height: 1.6;
+  color: #6c6a6a;
+}
+
+/* End Testimonials  */
