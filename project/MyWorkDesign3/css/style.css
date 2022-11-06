@@ -355,7 +355,8 @@ section.cards .container {
 section.cards .container .button,
 section.gallery .container .button,
 section.features .container .button,
-section.testimonials .container .button {
+section.testimonials .container .button,
+section.team .container .button {
   margin: 40px auto;
   border: 2px solid black;
   text-align: center;
@@ -370,7 +371,8 @@ section.testimonials .container .button {
 section.cards .container .button::before,
 section.gallery .container .button::before,
 section.features .container .button::before,
-section.testimonials .container .button::before {
+section.testimonials .container .button::before,
+section.team .container .button::before {
   content: '';
   position: absolute;
   width: 10px;
@@ -384,7 +386,8 @@ section.testimonials .container .button::before {
 section.cards .container .button::after,
 section.gallery .container .button::after,
 section.features .container .button::after,
-section.testimonials .container .button::after {
+section.testimonials .container .button::after,
+section.team .container .button::after {
   content: '';
   position: absolute;
   width: 10px;
@@ -397,7 +400,8 @@ section.testimonials .container .button::after {
 section.cards .container .button a,
 section.gallery .container .button a,
 section.features .container .button a,
-section.testimonials .container .button a {
+section.testimonials .container .button a,
+section.team .container .button a {
   color: black;
   text-decoration: none;
   font-size: x-large;
@@ -583,9 +587,9 @@ section.features .container .featuresBox .feature .info .button {
 }
 .gallery .container .cards2 {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  /* gap: 40px 40px; */
-  /* margin-top: 10rem; */
+  grid-template-columns: repeat(3, minmax(350px, 1fr));
+  grid-gap: 40px 40px;
+  margin-top: 10rem;
   margin: 6rem 40px;
 }
 @media (max-width: 1199px) {
@@ -601,29 +605,31 @@ section.features .container .featuresBox .feature .info .button {
 .gallery .container .cards2 .card2 {
 }
 .gallery .container .cards2 .card2 .conImg {
-  background-color: #f2f2f2;
-  width: 400px;
+  background-color: #fff;
+  width: calc(100% + 10px);
   display: flex;
-  align-items: center;
   height: 400px;
+  justify-content: center;
+  align-items: center;
 }
 @media (max-width: 768px) {
   .gallery .container .cards2 {
     grid-template-columns: repeat(1, 1fr);
   }
   .gallery .container .cards2 .card2 .conImg {
-    width: 100%;
-    height: 100%;
+    /* width: 100%;
+    height: 100%; */
     margin: 30px auto;
   }
 }
 .gallery .container .cards2 .card2 .conImg .image {
 }
 .gallery .container .cards2 .card2 .conImg .image img {
-  max-width: 90%;
-  max-height: 90%;
+  /* max-width: 100%;
+  max-height: 100%; */
   display: block;
   margin: auto;
+  width: 320px;
 }
 /* End Gallery */
 /* Features */
@@ -785,9 +791,12 @@ section.features .container .featuresBox .feature .info .button {
 /* Start Testimonials  */
 .testimonials {
   background-color: var(--back-section);
-  width: 100vw;
-  height: 100vh;
-  padding: 3rem 0 0 0;
+  /* height: 100vh; */
+  /* width: 112vw; */
+  /* padding: 3rem 0 0 0; */
+  margin: 5rem auto;
+  padding-bottom: 5rem;
+  padding-top: 5rem;
 }
 .testimonials .container {
 }
@@ -799,16 +808,36 @@ section.features .container .featuresBox .feature .info .button {
 }
 .testimonials .container .info .container1 {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  margin: 5rem auto auto auto;
+  grid-template-columns: repeat(3, minmax(350px, 1fr));
+  /* margin: 5rem auto auto auto; */
+  grid-gap: 1rem 3rem;
+  padding: 3rem 0;
 }
 .testimonials .container .info .container1 .testInfo {
   background-color: var(--white);
   width: 350px;
-  height: 215px;
+  /* height: 215px; */
   margin-bottom: 2rem;
   border-radius: 5px;
-  padding: 10px;
+  padding: 17px;
+}
+@media (max-width: 1199px) {
+  .testimonials .container .info .container1 {
+    grid-template-columns: repeat(2, minmax(350px, 1fr));
+  }
+  .testimonials .container .info .container1 .testInfo {
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .testimonials .container .info .container1 {
+    grid-template-columns: repeat(2, minmax(300px, 1fr));
+  }
+}
+@media (max-width: 669px) {
+  .testimonials .container .info .container1 {
+    grid-template-columns: repeat(1, minmax(350px, 1fr));
+  }
 }
 .testimonials .container .info .container1 .testInfo .imgage {
   position: relative;
@@ -838,9 +867,10 @@ section.features .container .featuresBox .feature .info .button {
 .testimonials .container .info .des {
 }
 .testimonials .container .info .des h1 {
+  font-size: 1.5em !important;
 }
 .testimonials .container .info .des h4 {
-  font-size: 19px;
+  font-size: 16px;
   color: #6c6a6a;
   padding-top: 5px;
 }
@@ -856,3 +886,127 @@ section.features .container .featuresBox .feature .info .button {
 }
 
 /* End Testimonials  */
+
+/* Start TeamMembers */
+.team {
+}
+.team .container {
+}
+.team .container .button {
+}
+.team .container .team_box {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(380px, 1fr));
+  position: relative;
+  margin-top: 5rem;
+}
+.team .container .team_box .team_box_parent {
+  width: 289px;
+  background-color: #f3f3f3;
+  border-radius: 10px;
+  height: 446px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 3rem;
+  margin-left: 3.5rem;
+}
+.team .container .team_box .team_box_parent .team_box_image {
+  display: flex;
+  justify-content: flex-end;
+}
+.team .container .team_box .team_box_parent .team_box_image .position {
+  /* position: absolute;
+  left: -60px;
+  top: 60px; */
+}
+.team .container .team_box .team_box_parent .team_box_image .image {
+}
+.team .container .team_box .team_box_parent .team_box_image .image img {
+  width: 290px;
+  border-radius: 10px;
+}
+@media (max-width: 1199px) {
+  .team .container .team_box {
+    grid-template-columns: repeat(2, minmax(380px, 1fr));
+    grid-gap: 0rem 5rem;
+  }
+  .team .container .team_box .team_box_parent {
+    width: 375px;
+    height: 540px;
+  }
+  .team .container .team_box .team_box_parent .team_box_image .image img {
+    width: 379px;
+  }
+}
+@media (max-width: 991px) {
+  .team .container .team_box {
+    grid-template-columns: repeat(2, minmax(400px, 1fr));
+    grid-gap: 0rem 0rem;
+  }
+  .team .container .team_box .team_box_parent {
+    width: 284px;
+    height: 422px;
+  }
+  .team .container .team_box .team_box_parent .team_box_image .image img {
+    width: 287px;
+  }
+}
+@media (max-width: 767px) {
+  .team .container .team_box {
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
+    grid-gap: 0rem 0rem;
+  }
+  .team .container .team_box .team_box_parent {
+    width: 269px;
+    height: 422px;
+  }
+  .team .container .team_box .team_box_parent .team_box_image .image img {
+    width: 256px;
+  }
+}
+@media (max-width: 659px) {
+  .team .container .team_box {
+    grid-template-columns: repeat(1, minmax(200px, 1fr));
+  }
+  .team .container .team_box .team_box_parent {
+    width: 569px;
+    height: 698px;
+    margin-bottom: 1.5rem;
+  }
+  .team .container .team_box .team_box_parent .team_box_image .image img {
+    width: 559px;
+  }
+}
+
+.team .container .team_box .team_box_parent .team_box_image .social {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 1rem 0 1rem;
+}
+.team .container .team_box .team_box_parent .team_box_image .social a {
+  margin-bottom: 2rem;
+}
+.team .container .team_box .team_box_parent .team_box_image .social a i {
+  font-size: 19px;
+  color: #8c8a8a;
+}
+.team .container .team_box .team_box_parent .text {
+  position: relative;
+}
+.team .container .team_box .team_box_parent .text .underText {
+  position: absolute;
+  left: 5px;
+  top: 1rem;
+}
+
+.team .container .team_box .team_box_parent .text .underText h2 {
+  text-transform: capitalize;
+  color: var(--main-color);
+}
+.team .container .team_box .team_box_parent .text .underText p {
+}
+
+/* End TeamMembers */
