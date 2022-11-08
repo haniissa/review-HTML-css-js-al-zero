@@ -356,7 +356,8 @@ section.cards .container .button,
 section.gallery .container .button,
 section.features .container .button,
 section.testimonials .container .button,
-section.team .container .button {
+section.team .container .button,
+section.services .container .button {
   margin: 40px auto;
   border: 2px solid black;
   text-align: center;
@@ -372,7 +373,8 @@ section.cards .container .button::before,
 section.gallery .container .button::before,
 section.features .container .button::before,
 section.testimonials .container .button::before,
-section.team .container .button::before {
+section.team .container .button::before,
+section.services .container .button::before {
   content: '';
   position: absolute;
   width: 10px;
@@ -387,7 +389,8 @@ section.cards .container .button::after,
 section.gallery .container .button::after,
 section.features .container .button::after,
 section.testimonials .container .button::after,
-section.team .container .button::after {
+section.team .container .button::after,
+section.services .container .button::after {
   content: '';
   position: absolute;
   width: 10px;
@@ -401,7 +404,8 @@ section.cards .container .button a,
 section.gallery .container .button a,
 section.features .container .button a,
 section.testimonials .container .button a,
-section.team .container .button a {
+section.team .container .button a,
+section.services .container .button a {
   color: black;
   text-decoration: none;
   font-size: x-large;
@@ -520,35 +524,19 @@ section.cards .container .cards .card .more i {
 }
 /* End cards */
 /* Start Gallery */
-.gallery {
+.gallery,
+.services {
   background-color: var(--back-section);
   position: relative;
 }
-.gallery::before {
+.gallery::before,
+.services::before {
   content: '';
   height: 100%;
   width: 100%;
   background-color: inherit;
   position: absolute;
-  /* background: linear-gradient(
-      -45deg,
-      #d3d5d5 16px,
-      red 16px,
-      #e7e7ea 16px,
-      transparent 0
-    ),
-    linear-gradient(45deg, #29373e 16px, transparent 0);
-  background-position-x: 0%, 0%;
-  background-position-y: 0%, 0%;
-  background-repeat: repeat, repeat;
-  background-size: auto, auto;
-  background-position-x: 0%, 0%;
-  background-position-y: 0%, 0%;
-  background-repeat: repeat, repeat;
-  background-size: auto, auto;
-  background-position: right top;
-  background-repeat: repeat-x;
-  background-size: 22px 32px; */
+
   background: linear-gradient(
       -45deg,
       var(--back-section) 16px,
@@ -556,22 +544,9 @@ section.cards .container .cards .card .more i {
       transparent 0
     ),
     linear-gradient(45deg, var(--back-section) 16px, transparent 0);
-  background-position-x: 0%, 0%;
-  background-position-y: 0%, 0%;
-  background-repeat: repeat, repeat;
-  background-size: auto, auto;
-  background-position-x: 0%, 0%;
-  background-position-y: 0%, 0%;
-  background-repeat: repeat, repeat;
-  background-size: auto, auto;
-  background-position-x: 0%, 0%;
-  background-position-y: 0%, 0%;
-  background-repeat: repeat, repeat;
-  background-size: auto, auto;
   background-position: right top;
   background-repeat: repeat-x;
   background-size: 32px 32px;
-
   top: -32px;
 }
 
@@ -632,7 +607,7 @@ section.features .container .featuresBox .feature .info .button {
   width: 320px;
 }
 /* End Gallery */
-/* Features */
+/* Start Features */
 .features {
 }
 .features .container {
@@ -787,7 +762,7 @@ section.features .container .featuresBox .feature .info .button {
 }
 .features .container .featuresBox .feature:nth-child(3) .info button {
 }
-/* Features */
+/* end Features */
 /* Start Testimonials  */
 .testimonials {
   background-color: var(--back-section);
@@ -1010,3 +985,116 @@ section.features .container .featuresBox .feature .info .button {
 }
 
 /* End TeamMembers */
+/* Start Services */
+.services {
+  /* height: 100vh; */
+  padding: 3rem 0 5rem;
+}
+.services .container {
+}
+.services .container .button {
+  margin-bottom: 5rem !important;
+}
+.services .container .button a {
+}
+.services .container .service {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(350px, 1fr));
+  grid-gap: 2rem 3rem;
+}
+@media (max-width: 1199px) {
+  .services .container .service {
+    grid-template-columns: repeat(2, minmax(350px, 1fr));
+  }
+}
+@media (max-width: 992px) {
+  .services .container .service {
+    grid-template-columns: repeat(2, minmax(300px, 1fr));
+  }
+}
+@media (max-width: 659px) {
+  .services .container .service {
+    grid-template-columns: repeat(1, minmax(300px, 1fr));
+  }
+}
+.services .container .service .serv {
+  height: 237px;
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  -webkit-box-shadow: 2px 2px 6px 4px rgba(206, 206, 206, 0.62);
+  box-shadow: 2px 2px 6px 4px rgba(206, 206, 206, 0.62);
+}
+.services .container .service .serv .font_image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 2;
+}
+.services .container .service .serv .font_image .center {
+}
+.services .container .service .serv .font_image .center i {
+  color: #d5d5d5;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.services .container .service .serv .font_image .center p {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: var(--main-color);
+}
+.services .container .service .serv .serv_footer {
+  display: flex;
+  flex: 0.5;
+  justify-content: space-between;
+  align-items: center;
+  z-index: var(--z-index);
+  background-color: #fff5f5;
+}
+.services .container .service .serv .serv_footer .left {
+  position: relative;
+  width: 10rem;
+  height: 100%;
+}
+.services .container .service .serv .serv_footer .left::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #d7d5d5;
+  content: '';
+  clip-path: polygon(0px 0px, 99.68% -2.11%, 124px 106.33%, 0% 100%);
+}
+.services .container .service .serv .serv_footer .left::after {
+  content: '';
+  width: 63%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background-color: var(--main-color);
+  clip-path: polygon(0px 0px, 99.68% -2.11%, 70px 97.89%, 0% 100%);
+  /* transform: skew(-8deg, 0);
+  transform-origin: bottom right; */
+}
+.services .container .service .serv .serv_footer .left p {
+  z-index: var(--z-index);
+  color: var(--white);
+  position: absolute;
+  transform: translate(75%, 15%);
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+.services .container .service .serv .serv_footer .right {
+}
+.services .container .service .serv .serv_footer .right a {
+  padding: 0 15px 0;
+  text-decoration: none;
+  color: var(--main-color);
+}
+
+/* End Services */
