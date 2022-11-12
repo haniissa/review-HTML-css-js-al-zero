@@ -357,7 +357,8 @@ section.gallery .container .button,
 section.features .container .button,
 section.testimonials .container .button,
 section.team .container .button,
-section.services .container .button {
+section.services .container .button,
+section.ourSkills .container .button {
   margin: 40px auto;
   border: 2px solid black;
   text-align: center;
@@ -374,7 +375,8 @@ section.gallery .container .button::before,
 section.features .container .button::before,
 section.testimonials .container .button::before,
 section.team .container .button::before,
-section.services .container .button::before {
+section.services .container .button::before,
+section.ourSkills .container .button::before {
   content: '';
   position: absolute;
   width: 10px;
@@ -390,7 +392,8 @@ section.gallery .container .button::after,
 section.features .container .button::after,
 section.testimonials .container .button::after,
 section.team .container .button::after,
-section.services .container .button::after {
+section.services .container .button::after,
+section.ourSkills .container .button::after {
   content: '';
   position: absolute;
   width: 10px;
@@ -405,7 +408,8 @@ section.gallery .container .button a,
 section.features .container .button a,
 section.testimonials .container .button a,
 section.team .container .button a,
-section.services .container .button a {
+section.services .container .button a,
+section.ourSkills .container .button a {
   color: black;
   text-decoration: none;
   font-size: x-large;
@@ -1017,6 +1021,7 @@ section.features .container .featuresBox .feature .info .button {
     grid-template-columns: repeat(1, minmax(300px, 1fr));
   }
 }
+/* accent-color: red; */
 .services .container .service .serv {
   height: 237px;
   background-color: var(--white);
@@ -1098,3 +1103,67 @@ section.features .container .featuresBox .feature .info .button {
 }
 
 /* End Services */
+/* Start skills */
+.ourSkills {
+}
+.ourSkills .container {
+}
+.ourSkills .container .button {
+  margin-bottom: 7rem !important;
+  margin-top: 6rem !important;
+}
+.ourSkills .container .conten {
+  display: flex;
+  /* grid-template-columns: repeat(2, minmax(300px, 1fr)); */
+  margin-bottom: 3rem;
+}
+.ourSkills .container .conten .image {
+  /* width: 90%; */
+  flex: 1.6;
+}
+.ourSkills .container .conten .image img {
+}
+.ourSkills .container .conten .skills {
+  flex: 2;
+}
+@media screen and (width < 992px) {
+  .ourSkills .container .conten {
+  }
+  .ourSkills .container .conten .image {
+    display: none;
+  }
+  .ourSkills .container .conten .skills {
+  }
+}
+.ourSkills .container .conten .skills .label {
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem 0 0.5rem;
+}
+.ourSkills .container .conten .skills .label label {
+  font-size: 18px;
+  font-weight: bold;
+}
+.ourSkills .container .conten .skills .label span {
+  border: 1px solid rgb(223, 222, 222);
+  padding: 3px;
+  border-radius: 3px;
+  color: var(--main-color);
+  font-size: 12px;
+  font-weight: bold;
+}
+.ourSkills .container .conten .skills progress {
+  /* accent-color: var(--main-color); */
+  background-color: #e8e7e7;
+  appearance: none;
+  border: none;
+  position: relative;
+  width: 100%;
+  height: 2rem;
+}
+::-moz-progress-bar {
+  background-color: var(--main-color);
+  width: 100%;
+}
+
+/* End Skills */
