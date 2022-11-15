@@ -358,7 +358,8 @@ section.features .container .button,
 section.testimonials .container .button,
 section.team .container .button,
 section.services .container .button,
-section.ourSkills .container .button {
+section.ourSkills .container .button,
+section.HowItWorks .container .button {
   margin: 40px auto;
   border: 2px solid black;
   text-align: center;
@@ -376,7 +377,8 @@ section.features .container .button::before,
 section.testimonials .container .button::before,
 section.team .container .button::before,
 section.services .container .button::before,
-section.ourSkills .container .button::before {
+section.ourSkills .container .button::before,
+section.HowItWorks .container .button::before {
   content: '';
   position: absolute;
   width: 10px;
@@ -393,7 +395,8 @@ section.features .container .button::after,
 section.testimonials .container .button::after,
 section.team .container .button::after,
 section.services .container .button::after,
-section.ourSkills .container .button::after {
+section.ourSkills .container .button::after,
+section.HowItWorks .container .button::after {
   content: '';
   position: absolute;
   width: 10px;
@@ -409,23 +412,28 @@ section.features .container .button a,
 section.testimonials .container .button a,
 section.team .container .button a,
 section.services .container .button a,
-section.ourSkills .container .button a {
+section.ourSkills .container .button a,
+section.HowItWorks .container .button a {
   color: black;
   text-decoration: none;
   font-size: x-large;
 }
 section.cards .container .cards {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 25px 3rem;
+  grid-template-columns: repeat(4, minmax(285px, 1fr));
+  gap: 25px 0px;
 }
 section.cards .container .cards .card {
-  width: 300px;
-  height: 400px;
+  width: 253px;
+  height: 395px;
   border: 1px solid #f0e6e6b3;
   border-radius: 6px;
   display: flex;
   flex-direction: column;
+}
+section.cards .container .cards .card .info p {
+  font-size: 14px;
+  color: #8e8e8e;
 }
 section.cards .container .cards .card .container {
   max-width: 100%;
@@ -1167,3 +1175,94 @@ section.features .container .featuresBox .feature .info .button {
 }
 
 /* End Skills */
+.HowItWorks {
+  background-color: var(--back-section);
+  padding: 3rem 0 5rem;
+  margin-top: 5rem;
+}
+.HowItWorks .container {
+}
+.HowItWorks .container .button {
+  margin-bottom: 4rem !important;
+  margin-top: 5rem !important;
+}
+.HowItWorks .container .button a {
+}
+.HowItWorks .container .conten {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(200px, 1fr));
+  grid-gap: 0rem 5rem;
+}
+.HowItWorks .container .conten .image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.HowItWorks .container .conten .image img {
+  max-width: 100%;
+  width: 435px;
+}
+@media screen and (width < 992px) {
+  .HowItWorks .container .conten {
+    grid-template-columns: repeat(1, minmax(200px, 1fr));
+  }
+  .HowItWorks .container .conten .image {
+    margin-bottom: 2rem;
+  }
+  .HowItWorks .container .conten .image img {
+  }
+}
+.HowItWorks .container .conten .boxs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.HowItWorks .container .conten .boxs .box {
+  display: flex;
+  background-color: #f6f5f5;
+  padding: 2rem;
+  margin: 0.7rem 0;
+  height: 12rem;
+}
+.HowItWorks .container .conten .boxs .box .img {
+  flex: 0.5;
+  align-self: center;
+}
+.HowItWorks .container .conten .boxs .box .img img {
+  max-width: 100%;
+  width: 70%;
+}
+.HowItWorks .container .conten .boxs .box .text {
+  flex: 2;
+  align-self: center;
+  line-height: 1.6;
+}
+.HowItWorks .container .conten .boxs .box .text h2 {
+}
+.HowItWorks .container .conten .boxs .box .text p {
+}
+
+@media screen and (width < 768px) {
+  .HowItWorks .container .conten .boxs {
+  }
+  .HowItWorks .container .conten .boxs .box {
+    display: block;
+    height: 19rem;
+  }
+  .HowItWorks .container .conten .boxs .box .img {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+  }
+  .HowItWorks .container .conten .boxs .box .img img {
+    width: 60px;
+  }
+  .HowItWorks .container .conten .boxs .box .text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    line-height: 1.7;
+  }
+}
