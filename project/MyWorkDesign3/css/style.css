@@ -360,7 +360,8 @@ section.team .container .button,
 section.services .container .button,
 section.ourSkills .container .button,
 section.HowItWorks .container .button,
-section.latestEvent .container .button {
+section.latestEvent .container .button,
+section.pricing .container .button {
   margin: 40px auto;
   border: 2px solid black;
   text-align: center;
@@ -380,7 +381,8 @@ section.team .container .button::before,
 section.services .container .button::before,
 section.ourSkills .container .button::before,
 section.HowItWorks .container .button::before,
-section.latestEvent .container .button::before {
+section.latestEvent .container .button::before,
+section.pricing .container .button::before {
   content: '';
   position: absolute;
   width: 10px;
@@ -399,7 +401,8 @@ section.team .container .button::after,
 section.services .container .button::after,
 section.ourSkills .container .button::after,
 section.HowItWorks .container .button::after,
-section.latestEvent .container .button::after {
+section.latestEvent .container .button::after,
+section.pricing .container .button::after {
   content: '';
   position: absolute;
   width: 10px;
@@ -417,7 +420,8 @@ section.team .container .button a,
 section.services .container .button a,
 section.ourSkills .container .button a,
 section.HowItWorks .container .button a,
-section.latestEvent .container .button a {
+section.latestEvent .container .button a,
+section.pricing .container .button a {
   color: black;
   text-decoration: none;
   font-size: x-large;
@@ -1421,10 +1425,11 @@ section.features .container .featuresBox .feature .info .button {
   display: flex;
   justify-content: center;
   position: relative;
+  margin: 5rem 0 7rem;
 }
 .latestEvent .container .subscribe form {
-  position: absolute;
-  top: 5rem;
+  /* position: absolute;
+  top: 5rem; */
   width: 575px;
   display: flex;
   justify-content: center;
@@ -1439,6 +1444,7 @@ section.features .container .featuresBox .feature .info .button {
   outline: none;
   border: none;
   align-self: center;
+  padding: 15px;
 }
 .latestEvent .container .subscribe form button {
   padding: 25px;
@@ -1472,3 +1478,140 @@ section.features .container .featuresBox .feature .info .button {
   background-color: #1c89e3;
 }
 /* End Latest Event */
+/* Start pricing plans */
+.pricing {
+  background-color: var(--back-section);
+}
+.pricing .container {
+  padding-top: 3rem;
+  padding-bottom: 5rem;
+}
+.pricing .container .button {
+  margin-bottom: 6rem !important;
+}
+.pricing .container .button a {
+}
+.pricing .container .all_pricing {
+  /* display: flex;
+  justify-content: space-between; */
+  display: grid;
+  grid-template-columns: repeat(3, minmax(360px, 1fr));
+  grid-gap: 25px 25px;
+}
+.pricing .container .all_pricing .all_pricing_child {
+  display: flex;
+  flex-direction: column;
+  height: 720px;
+  background-color: white;
+  -webkit-box-shadow: 0 5px 5px 0px rgba(159, 159, 159, 0.62);
+  box-shadow: 0 5px 5px 0px rgba(159, 159, 159, 0.62);
+}
+.pricing .container .all_pricing .all_pricing_child.two {
+  margin-top: -1.2rem;
+}
+.pricing .container .all_pricing .all_pricing_child .img {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* position: relative; */
+}
+.pricing .container .all_pricing .all_pricing_child .img .img_son {
+  position: relative;
+  width: 100%;
+}
+.pricing .container .all_pricing .all_pricing_child .img .img_son span {
+  position: absolute;
+  right: -2.3rem;
+  transform: rotate(90deg);
+  top: 52px;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  background-color: var(--main-color);
+  /* width: 40%; */
+  width: 145px;
+  height: 40px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  clip-path: polygon(
+    100% 0%,
+    90% 48.62%,
+    100% 100%,
+    44% 100.08%,
+    0px 100%,
+    0px 0px
+  );
+  padding: 0 5px;
+}
+@media screen and (width <1200px) {
+  .pricing .container .all_pricing {
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
+  }
+  .pricing .container .all_pricing .all_pricing_child.two {
+    margin-top: 0;
+  }
+  .pricing .container .all_pricing .all_pricing_child .img span {
+    top: 72px;
+  }
+}
+@media screen and (width < 992px) {
+  .pricing .container .all_pricing .all_pricing_child .img span {
+    top: 50px;
+  }
+}
+@media screen and (width < 660px) {
+  .pricing .container .all_pricing {
+    grid-template-columns: repeat(1, minmax(300px, 1fr));
+  }
+  /* .pricing .container .all_pricing .all_pricing_child .img span {
+    top: 40px;
+  } */
+}
+.pricing .container .all_pricing .all_pricing_child .img h3 {
+  font-size: 23px;
+  font-weight: bolder;
+  padding: 25px 0;
+}
+.pricing .container .all_pricing .all_pricing_child .img img {
+  max-width: 100%;
+  width: 80px;
+}
+.pricing .container .all_pricing .all_pricing_child .img p:first-of-type {
+  font-size: 3.6rem;
+  color: var(--main-color);
+  padding-top: 2rem;
+  font-weight: bold;
+}
+.pricing .container .all_pricing .all_pricing_child .img p:nth-last-of-type(1) {
+  color: #acacac;
+  margin-bottom: 1rem;
+}
+.pricing .container .all_pricing .info {
+}
+.pricing .container .all_pricing .info .info_des {
+  /* border-bottom: 1px solid #e8e4e4; */
+  border-top: 1px solid #ebeaea;
+  padding: 22px 15px;
+  width: 100%;
+}
+.pricing .container .all_pricing .info i {
+  color: var(--main-color);
+  font-size: 18px;
+  font-weight: bolder;
+}
+.pricing .container .all_pricing .info span {
+}
+.pricing .container .all_pricing .butt {
+  width: max-content;
+  align-self: center;
+  padding: 18px;
+  border: 2px solid var(--main-color);
+  color: var(--main-color);
+  background-color: var(--white);
+  border-radius: 5px;
+  font-weight: bold;
+  margin-top: 1.5rem;
+  cursor: pointer;
+}
+/* End pricing plans */
