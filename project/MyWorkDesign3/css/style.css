@@ -361,7 +361,8 @@ section.services .container .button,
 section.ourSkills .container .button,
 section.HowItWorks .container .button,
 section.latestEvent .container .button,
-section.pricing .container .button {
+section.pricing .container .button,
+section.topvideos .container .button {
   margin: 40px auto;
   border: 2px solid black;
   text-align: center;
@@ -382,7 +383,8 @@ section.services .container .button::before,
 section.ourSkills .container .button::before,
 section.HowItWorks .container .button::before,
 section.latestEvent .container .button::before,
-section.pricing .container .button::before {
+section.pricing .container .button::before,
+section.topvideos .container .button::before {
   content: '';
   position: absolute;
   width: 10px;
@@ -402,7 +404,8 @@ section.services .container .button::after,
 section.ourSkills .container .button::after,
 section.HowItWorks .container .button::after,
 section.latestEvent .container .button::after,
-section.pricing .container .button::after {
+section.pricing .container .button::after,
+section.topvideos .container .button::after {
   content: '';
   position: absolute;
   width: 10px;
@@ -421,7 +424,8 @@ section.services .container .button a,
 section.ourSkills .container .button a,
 section.HowItWorks .container .button a,
 section.latestEvent .container .button a,
-section.pricing .container .button a {
+section.pricing .container .button a,
+section.topvideos .container .button a {
   color: black;
   text-decoration: none;
   font-size: x-large;
@@ -1615,3 +1619,101 @@ section.features .container .featuresBox .feature .info .button {
   cursor: pointer;
 }
 /* End pricing plans */
+/* Start top videos */
+section.topvideos {
+  /* height: 100vh; */
+  margin: 7rem 0 11rem 0;
+}
+section.topvideos .container {
+}
+section.topvideos .container .button {
+  /* margin-top: 4rem; */
+}
+section.topvideos .container .button a {
+}
+section.topvideos .container .top_videos {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(200px, auto));
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-areas:
+    'left img img img img'
+    'left img img img img'
+    'left img img img img'
+    'left img img img img'
+    'left text text text text';
+  border: 1px solid #ccc;
+  margin-top: 4rem;
+}
+@media screen and (width < 992px) {
+  section.topvideos .container .top_videos {
+    display: flow-root;
+  }
+}
+section.topvideos .container .top_videos .div1 {
+  /* grid-area: 1\1\10\2; */
+  grid-area: left;
+  border-right: 1px solid #ccc;
+}
+section.topvideos .container .top_videos .div1 .title_video:first-child {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 15px;
+  font-weight: bold;
+  background-color: #f4f3f3;
+  border-top: none;
+}
+section.topvideos .container .top_videos .div1 .title_video {
+  /* padding: 15px; */
+  border-top: 1px solid #ccc;
+}
+section.topvideos .container .top_videos .div1 .title_video:hover {
+  background-color: #f4f3f3;
+  transition: all ease-in-out 0.3s;
+}
+section.topvideos .container .top_videos .div1 .title_video a {
+  text-decoration: none;
+  width: 100%;
+  display: block;
+  padding: 15px;
+  color: black;
+}
+section.topvideos .container .top_videos .div1 .title_video:hover a {
+  color: var(--main-color);
+  transition: all ease-in-out 0.3s;
+}
+section.topvideos .container .top_videos .div1 .title_video span {
+  color: #9d9c9c;
+  padding: 10px 0;
+  display: inline-block;
+}
+section.topvideos .container .top_videos .div2 {
+  /* grid-area: 1\2\10\6; */
+}
+section.topvideos .container .top_videos .div3 {
+  /* grid-area: 1\2\9\6; */
+  /* grid-area: text; */
+  grid-area: img;
+  background-color: var(--back-section);
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+section.topvideos .container .top_videos .div3 img {
+  max-width: 100%;
+  width: 836px;
+}
+section.topvideos .container .top_videos .div3 .div4 {
+  /* grid-area: 9\2\10\6; */
+  /* grid-area: text; */
+  background-color: var(--white);
+  padding: 20px;
+}
+@media screen and (width < 992px) {
+  section.topvideos .container .top_videos .div3 .div4 {
+    margin-top: 1rem;
+  }
+}
+/* section.topvideos .container .top_videos .div3 {
+} */
+/* End top videos */
