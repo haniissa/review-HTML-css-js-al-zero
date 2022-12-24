@@ -1721,6 +1721,7 @@ section.awesomeState {
   background-color: rgb(242, 242, 242);
   /* height: 70vh; */
   padding-top: 5rem;
+  padding-bottom: 5rem;
 }
 section.awesomeState .title {
   display: flex;
@@ -1778,3 +1779,98 @@ section.awesomeState .boxs .box .small-font {
   color: var(--main-color);
 }
 /* End our awesome state */
+/* Start discount */
+section.discount {
+  background-color: rgb(242, 242, 242);
+}
+section.discount .container {
+}
+section.discount .our_Discounts {
+  /* height: 100vh; */
+  display: grid;
+  grid-template-columns: repeat(2, minmax(200px, 1fr));
+}
+@media screen and (width < 992px) {
+  section.discount .our_Discounts {
+    grid-template-columns: repeat(1, minmax(200px, 1fr));
+  }
+}
+section.discount .our_Discounts .left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  padding: 4rem 0;
+  background-color: var(--main-color);
+}
+section.discount .our_Discounts .left .title {
+  padding-top: 2rem;
+}
+section.discount .our_Discounts .left .title h2 {
+  font-weight: bold;
+  font-size: 2.4rem;
+}
+section.discount .our_Discounts .left .des {
+  text-align: center;
+  padding: 2rem;
+  line-height: 1.6;
+  font-size: 1.29rem;
+}
+section.discount .our_Discounts .left .des p {
+}
+section.discount .our_Discounts .left .img {
+}
+section.discount .our_Discounts .left .img img {
+  max-width: 100%;
+  width: 300px;
+}
+section.discount .our_Discounts .right {
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  padding-top: 2rem;
+}
+section.discount .our_Discounts .right .title {
+  padding-top: 3rem;
+}
+section.discount .our_Discounts .right .title h2 {
+  font-size: 2.2rem;
+  margin: 0.9rem 0;
+  font-weight: bold;
+}
+section.discount .our_Discounts .right form {
+  display: flex;
+  flex-direction: column;
+  width: 305px;
+}
+section.discount .our_Discounts .right form input {
+  margin: 0.9rem 0;
+  width: 100%;
+  border: none;
+  background-color: #f0f0f0;
+  border-bottom: 1px solid rgb(227, 227, 227);
+  padding: 1.1rem 10px;
+}
+section.discount .our_Discounts .right form textarea {
+  resize: none;
+  border: none;
+  outline: none;
+  background-color: #f0f0f0;
+  margin: 0.9rem 0;
+  border-bottom: 1px solid rgb(227, 227, 227);
+  padding: 1.1rem 10px;
+}
+section.discount .our_Discounts .right form button {
+  padding: 1rem;
+  border: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: capitalize;
+  color: var(--white);
+  background-color: var(--main-color);
+  margin: 0.9rem 0;
+}
+/* End discount */
