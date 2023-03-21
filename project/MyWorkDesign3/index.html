@@ -6,16 +6,21 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>My own work desgin 3</title>
+	<!-- google fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap" rel="stylesheet">
+	<!-- Gsap animation libary -->
+	<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/CSSRulePlugin.min.js" crossorigin></script>
 	<!-- Render all element normal -->
 	<link rel="stylesheet" href="./css/normalize.css">
 	<!-- Font Awesoem Library -->
 	<link rel="stylesheet" href="./css/all.min.css">
 	<!-- main css -->
 	<link rel="stylesheet" href="./css/style.css">
-	<!-- google fonts -->
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap" rel="stylesheet">
+	<!-- <script src="./../../node_modules/css-matrix/lib/CSSMatrix.js "></script> -->
+	<script defer type="module" src="./js/animation.js"></script>
 </head>
 
 <body>
@@ -35,75 +40,81 @@
 					<img src="./img/megamenu.png" alt="">
 				</div>
 				<div class="allIn">
+					<div class="first-haf">
 
-					<div class="inside_dropM">
-						<div>
+						<div class="inside_dropM">
+							<!-- <div> -->
 
 							<i class="fa fa-comments fa-fw"></i>
 							<a href="#">Testimonials</a>
+							<!-- </div> -->
 						</div>
-					</div>
-					<div class="inside_dropM">
-						<div>
+						<div class="inside_dropM">
+							<!-- <div> -->
 
 							<i class="fa fa-user fa-fw"></i>
 							<a href="#">Team Members</a>
+							<!-- </div> -->
 						</div>
-					</div>
-					<div class="inside_dropM">
-						<div>
+						<div class="inside_dropM">
+							<!-- <div> -->
 
 							<i class="fa fa-building fa-fw"></i>
 							<a href="#">Services</a>
+							<!-- </div> -->
 						</div>
-					</div>
-					<div class="inside_dropM">
-						<div>
+						<div class="inside_dropM">
+							<!-- <div> -->
 
 							<i class="fa fa-check-circle fa-fw"></i>
 							<a href="#">Our Skills</a>
+							<!-- </div> -->
 						</div>
-					</div>
-					<div class="inside_dropM">
-						<div>
+						<div class="inside_dropM">
+							<!-- <div> -->
 
 							<i class="fa fa-clipboard fa-fw"></i>
 							<a href="#">How it Works</a>
+							<!-- </div> -->
 						</div>
 					</div>
-					<div class="inside_dropM">
-						<div>
+					<!-- 1/5 -->
+					<div class="second-haf">
+
+						<div class="inside_dropM">
+							<!-- <div> -->
 
 							<i class="fa fa-calendar-alt fa-fw"></i>
 							<a href="#">Events</a>
+							<!-- </div> -->
 						</div>
-					</div>
-					<div class="inside_dropM">
-						<div>
+						<div class="inside_dropM">
+							<!-- <div> -->
 
 							<i class="fas fa-server fa-fw"></i>
 							<a href="#">Pricing Plans</a>
+							<!-- </div> -->
 						</div>
-					</div>
-					<div class="inside_dropM">
-						<div>
+						<div class="inside_dropM">
+							<!-- <div> -->
 
 							<i class="fa fa-play-circle fa-fw"></i>
 							<a href="">Top Videos</a>
+							<!-- </div> -->
 						</div>
-					</div>
-					<div class="inside_dropM">
-						<div>
+						<div class="inside_dropM">
+							<!-- <div> -->
 
 							<i class="fa fa-chart-bar fa-fw"></i>
 							<a href="">Stats</a>
+							<!-- </div> -->
 						</div>
-					</div>
-					<div class="inside_dropM">
-						<div>
+						<div class="inside_dropM">
+							<!-- <div> -->
 
 							<i class="fas fa-percent fa-fw"></i>
 							<a href="">Request A Discount</a>
+							<!-- </div> -->
 						</div>
 					</div>
 				</div>
@@ -364,7 +375,7 @@
 				<a href="">Features</a>
 			</div>
 			<div class="featuresBox">
-				<div class="feature">
+				<div class="feature" id="feature">
 					<div class="img">
 						<img src="./img/features-01.jpg" alt="">
 					</div>
@@ -379,7 +390,7 @@
 						<button>More</button>
 					</div>
 				</div>
-				<div class="feature">
+				<div class="feature" id="feature">
 					<div class="img">
 						<img src="./img/features-02.jpg" alt="">
 					</div>
@@ -394,7 +405,7 @@
 						<button>More</button>
 					</div>
 				</div>
-				<div class="feature">
+				<div class="feature" id="feature">
 					<div class="img">
 						<img src="./img/features-03.jpg" alt="">
 					</div>
@@ -568,7 +579,7 @@
 				<a href="">Team Members</a>
 			</div>
 			<div class="team_box">
-				<div class="team_box_parent">
+				<div class="boxn">
 					<div class="team_box_image">
 						<div class="image">
 							<div class="position">
@@ -582,14 +593,18 @@
 							<a href="" class=""><i class="fab fa-youtube"></i></a>
 						</div>
 					</div>
-					<div class="text">
-						<div class="underText">
-							<h2>name</h2>
-							<p>Simple Short Description</p>
+					<div class="team_box_parent">
+
+						<div class="text">
+							<div class="underText">
+								<h2>name</h2>
+								<p>Simple Short Description</p>
+							</div>
 						</div>
 					</div>
 				</div>
-				<div class="team_box_parent">
+				<div class="boxn">
+
 					<div class="team_box_image">
 						<div class="image">
 							<div class="position">
@@ -603,14 +618,17 @@
 							<a href="" class=""><i class="fab fa-youtube"></i></a>
 						</div>
 					</div>
-					<div class="text">
-						<div class="underText">
-							<h2>name</h2>
-							<p>Simple Short Description</p>
+					<div class="team_box_parent">
+						<div class="text">
+							<div class="underText">
+								<h2>name</h2>
+								<p>Simple Short Description</p>
+							</div>
 						</div>
 					</div>
 				</div>
-				<div class="team_box_parent">
+				<div class="boxn">
+
 					<div class="team_box_image">
 						<div class="image">
 							<div class="position">
@@ -624,14 +642,17 @@
 							<a href="" class=""><i class="fab fa-youtube"></i></a>
 						</div>
 					</div>
-					<div class="text">
-						<div class="underText">
-							<h2>name</h2>
-							<p>Simple Short Description</p>
+					<div class="team_box_parent">
+						<div class="text">
+							<div class="underText">
+								<h2>name</h2>
+								<p>Simple Short Description</p>
+							</div>
 						</div>
 					</div>
 				</div>
-				<div class="team_box_parent">
+				<div class="boxn">
+
 					<div class="team_box_image">
 						<div class="image">
 							<div class="position">
@@ -645,14 +666,17 @@
 							<a href="" class=""><i class="fab fa-youtube"></i></a>
 						</div>
 					</div>
-					<div class="text">
-						<div class="underText">
-							<h2>name</h2>
-							<p>Simple Short Description</p>
+					<div class="team_box_parent">
+						<div class="text">
+							<div class="underText">
+								<h2>name</h2>
+								<p>Simple Short Description</p>
+							</div>
 						</div>
 					</div>
 				</div>
-				<div class="team_box_parent">
+				<div class="boxn">
+
 					<div class="team_box_image">
 						<div class="image">
 							<div class="position">
@@ -666,14 +690,17 @@
 							<a href="" class=""><i class="fab fa-youtube"></i></a>
 						</div>
 					</div>
-					<div class="text">
-						<div class="underText">
-							<h2>name</h2>
-							<p>Simple Short Description</p>
+					<div class="team_box_parent">
+						<div class="text">
+							<div class="underText">
+								<h2>name</h2>
+								<p>Simple Short Description</p>
+							</div>
 						</div>
 					</div>
 				</div>
-				<div class="team_box_parent">
+				<div class="boxn">
+
 					<div class="team_box_image">
 						<div class="image">
 							<div class="position">
@@ -687,14 +714,17 @@
 							<a href="" class=""><i class="fab fa-youtube"></i></a>
 						</div>
 					</div>
-					<div class="text">
-						<div class="underText">
-							<h2>name</h2>
-							<p>Simple Short Description</p>
+					<div class="team_box_parent">
+						<div class="text">
+							<div class="underText">
+								<h2>name</h2>
+								<p>Simple Short Description</p>
+							</div>
 						</div>
 					</div>
 				</div>
-				<div class="team_box_parent">
+				<div class="boxn">
+
 					<div class="team_box_image">
 						<div class="image">
 							<div class="position">
@@ -708,14 +738,17 @@
 							<a href="" class=""><i class="fab fa-youtube"></i></a>
 						</div>
 					</div>
-					<div class="text">
-						<div class="underText">
-							<h2>name</h2>
-							<p>Simple Short Description</p>
+					<div class="team_box_parent">
+						<div class="text">
+							<div class="underText">
+								<h2>name</h2>
+								<p>Simple Short Description</p>
+							</div>
 						</div>
 					</div>
 				</div>
-				<div class="team_box_parent">
+				<div class="boxn">
+
 					<div class="team_box_image">
 						<div class="image">
 							<div class="position">
@@ -729,10 +762,12 @@
 							<a href="" class=""><i class="fab fa-youtube"></i></a>
 						</div>
 					</div>
-					<div class="text">
-						<div class="underText">
-							<h2>name</h2>
-							<p>Simple Short Description</p>
+					<div class="team_box_parent">
+						<div class="text">
+							<div class="underText">
+								<h2>name</h2>
+								<p>Simple Short Description</p>
+							</div>
 						</div>
 					</div>
 				</div>
